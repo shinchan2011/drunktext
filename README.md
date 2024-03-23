@@ -1,1 +1,1 @@
-# drunktext
+DIARY
