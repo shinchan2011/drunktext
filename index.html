@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diary</title>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style1.css" id="styleSheet" />
   </head>
   <body>
-    <div>
+    <button id="styleToggle" class="style-toggle">Change Style</button>
+    <div class="container">
       <div class="page">
         <div class="para">
             <p>Hi!<br><br>
@@ -24,7 +25,7 @@
                 Hi Miku!<br>
                 Aur batao kaise ho?<br>
                 Well technically its already 31st par kya hi fark padta hai. I hope ki tum bhi abhi tak college pahunch hi gayi hogi. Well kaisi rahi wedding, I hope ki kaafi enjoy kiya hoga. Yaar maine ek baat notice ki hai, ki apan jab bhi college se bahar gaye hai, to sath me hi gaye hai. Like sabse pehli baar last year 26 jan ke waqt, phir october end me, tu ghar gayi thi aur mai maasi ke wedding me, aur third time abb, interesting right? Chalo choro ye baatein, batao kya kya hua wahan par. Chalo pehle mai hi start karta hoon. Apan 24th ko college se nikle the, jaane ke waqt flight se apna arrival time sync nahi ho rah tha to apan train se gaye the first BGP-Howrah then Howrah-kayamkulam. Howrah wali journey itni acchi nahi thi kyonki mere seat ke thik peeche ek pyari si bacchi thi jo poore raste mere seat par laat marte hue gayi thi, uske karan me poori journey so hi nahi paya. Phir howrah me kuch ghante ke liye hum Biraj ki maasi ke ghar ruke the. Unn kuch ghanto me uski maasi ne hame khana khila khila kar hamari halat kharab kar di thi. Phir howrah to kayamkulam wali journey bhi itni kuch khaas nahi rahi, hamare next compartment me hamare hi saath ek aur ICPC ki team jaa rahi thi aur vo theeno poore raaste coding kar rahe the, unhe dekh kar hum depress ho gaye the, ki kahin hum series dekhkar kuch galat to nahi kar rahe. Phir mere thik next seat me ek uncle ji the jinhone apne kharrato se mujhe poore raaste sone nahi diya. At last 26th evening ko apan kayamkulam pahunch gaye. Station se hame pick karne college ki bus aayi thi. Apan campus me enter kiye aur hame realize hua ki actual college campus dikhta kaisa hai. Phir apan ko rooms allocate hue jo ki main building se almost 1km door thi. Hame har samay itni door chalke jaana padta tha, aur raaste me ek nadi aati thi to hame bridge paar karna padta tha aur phir hamara room 5th floor me tha aur building me lift bhi nahi thi, aur majje ki baat to ye hai ki ye sab campus ke andar tha. Baaki sab to thik hi tha 28th ko apna main contest tha aur apan se sirf do hi questions bane. Phir 29th ki subha hum kochi ke liye nikal gaye aur poora din hum city ko jitna explore kar sakte the kiya. Aur phir aaj subah humne Kochi se Hyderabad ki flight li phir airport me khana khaya jo ki kaafi mehenga tha, phir 5 ghante baad hamne doosri flight li patna ki aur abhi 31st ki subah ke 1 baj rahe hain aur mai bhagalpur ki train me hoon. Agar train late nahi hui to subah 5 baje tak pahunch jayenge. Kaafi hectic ho gaya right? Ek aur baat kehni thi, saari me tu bohot sundar lagti hai. Well, kaafi neend aa rahi hai mujhe ab, Bye, kabhi aur baat karenge.<br>
-                Aaj ka song - Love you still by Tyler Shaw.<br>
+                Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/31fMJwgrgNdk1IbWZEchX2?si=460d2dd2d504473d">Love you still by Tyler Shaw.</a><br>
                 Good Night, khayal rakhna.
             </p>
         </div>
@@ -53,7 +54,7 @@
             <p>20/02/24<br><br>
                 Hi Miku!<br>
                 Bahut thak gaya mai aaj, yaar. Pichle do dinno se lagatar poore din acedemic building me hi beet gaya, Phir aaj subha subha Inauguration aur sham ko cultural night, kaafi hectic tha, Par maza bhi aaya. Chalo choro ye sab, ye batao kaise ho? Sabkuch kaisa chal raha. Yaar mera to kuch hi hectic ho gaya hai sab, itna kuch manage hi nahi ho pa raha ek sath, shayad Samwaad ka incharge nahi banna tha mujhe. Waise tune gymkhana ki site me contribute karne se mana kyon kar diya. Yaar, terepe load nahi aata zyada, apan sab milkar bana lete. Chalo choro ye baatein, agle hafte midsem hai, tayyari ho gayi, meri to bilkul nahi hui yaar. Sabne itna kuch padha diya hai, upar se Himadri sir kya padha rahe kuch samajh nahi aa rah.  Lekin baat to ye bhi hai ki pehle bhi kuch kahan samajh aata tha, ummeed hai ki midsems acche jaye. Aur tu bhi chinta matt tere bhi acche hi jayenge. Mai bhi yaar kya faaltu ki baaton me tumhe uljha raha hoon, tumhe padhna bhi hoda, chalo kabhi aur baat karenge. Best of Luck for midsems.<br>
-                Aaj ka song - Daydream by Lily Meola<br>
+                Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/6El3mjjzGWOas5meWIETKI?si=229e4560f5c74bf3">Daydream by Lily Meola</a><br>
                 Bye, khayal rakhna.
             </p>
         </div>
@@ -63,7 +64,7 @@
             <p>06/03/24<br><br>
                 Hi!<br>
                 Well, its 3:40 in the morning now. Pata nahi achanak se aankh khul gayi. Aur ab neend hi nahi aa rahi. I miss those days when I used to wake up and see if you have texted me back. I know that from getting to know someone, to loving them, its such a long journey. And I know you didnt have the emotional capacity to start the whole process again with someone. I guess when we're young, we just believe there'll be many people with whom we'll connect with. And later in life, we realize it only happens a few times. I think it happened to you. That you have met that people of you. And if I am right, if you really have then no matter what happen just dont let him go. I wish that it never happens that you both stop talking to each other. But somehow if it does happen then please remember that, when we loose touch with someone, we just try to store up all the things in our mind that we want to tell them from every big events to every small details and we think that the next time when we will meet I am gonna tell her/him everything, but it just never happen so, right. Because when we finally see each other we either just ignore them or just fake it saying that whatever happened, happened for good. And even if we gather the courage to tell them what we really want to, we just end up talking about big events thinking its too much bother to talk about the little things but its the little things that makes up life, right. I know people say that its never late for anything but trust me it doesnt always work like that. So if you ever loose touch with him and the next time when you meet him then please spill your heart out and tell him what you had been keeping inside you for so long and not because he will be unaware of those things, but because its the right thing to do. And tell him that its his memory that always make you happy whenever you think about it. But just remember whenever you tell him just tell him in person and not in chat. And if you missed anything that you wanted to say then save it for the next time and just spill that out no matter if the topic you are talking in is different cause you know you dont have to be perfect around him and he will understand you anyway.<br>
-                Aaj ka song - Head In The Clouds by Hayd
+                Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/3CeKc83EsgRPItgvlDHo5B?si=5b4ff7cb67f943fe">Head In The Clouds by Hayd</a>
             </p>
         </div>
       </div>
@@ -75,7 +76,7 @@
             The very first thing that we did the next day was breakfast at a roadside stall and their dosa is one of the best that I ever had. And the stall owner turned out to be a really friendly guy, he set us up with a E-Rickshaw that gave us atmost the whole tour of the city. First he took us to Sarnath, where we explored the Dhamekh Stupa and a fascinating museum. Then, off we went to Namo Ghat, we spent a little time there. Next stop was the Ramnagar Fort, followed by a visit to BHU where we checked out the Vishwanath temple. The day continued as we visited the Durga Kund Mandir and then made our way to Assi Ghat, where we had a boat ride from Assi Ghat to Manikarnika Ghat and with that our second day came to an end.
             On the Third day we booked a car and went to Vindhyachal, there we explored three mandirs Vindhyavasini Mandir, Kali khoh Mandir and Ashtabhuja mandir and after that we went for Chunar fort and after that Dev went home and we had our train at evening which got late by 12 hrs so we had to book a room near station. We boarded the train at sunrise and reached college at 4.
             So that was pretty much the zist of our trip, hope you didnt got bored. I wish if I could ever visit those places again with you.<br>
-            Aaj ka song - The Night We Met by Lord Huron
+            Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/3hRV0jL3vUpRrcy398teAU?si=db3fe137756742fe">The Night We Met by Lord Huron</a>
           </p>
         </div>
       </div>
@@ -246,7 +247,7 @@
               I cant talk to you in person but we don't need that anyway I guess, because I believe we never really did so, right? I will send you songs on weekends like I used to. And I will tell you about my days if I ever feel low, or maybe I will send you some stories sometimes if you would like that or maybe I will tell anything stupid for no reason.<br>
               I hope this will make up for it.<br><br>
               Or if you also want to talk to me anytime about how your day went or anything thats in your mind then I guess I would love to hear it😊<br><br>
-              Aaj ka song - Heather of Conan Gray<br>
+              Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/4xqrdfXkTW4T0RauPLv3WA?si=749f95fa873548ca">Heather of Conan Gray</a><br>
               Bye, khayal rakho apna
             </p>
           </div>
@@ -269,7 +270,7 @@
           <div class="para">
             <p>19/08/24<br>
               Day 272<br><br>
-              Aaj ka song - Moral of the Story by Ashe<br>
+              Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/2nC3QhMI9reBIOWutbU3Tj?si=aa6b71b9f7dd4fb2">Moral of the Story by Ashe</a><br>
               Sorry thora late ho gaya😅
             </p>
           </div>
@@ -278,7 +279,7 @@
           <div class="para">
             <p>26/08/24<br>
               Day 279<br><br>
-              Aaj ka song - Before You Go by Lewis Capaldi<br>
+              Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP?si=c1a1c1edb77e4e8c">Before You Go by Lewis Capaldi</a><br>
               Well aaj phirse late ho gaya😅<br>
               Waise Happy Janmashtami
             </p>
@@ -361,7 +362,7 @@
               <b>Chapter 7: A Plan to See Her Again</b><br>
               Despite the daunting truth, Liam’s love for Sofia only grew stronger. He couldn’t just forget about her. He decided that the only way to see her again was to find a way into the palace. Liam applied for a job as a servant at the palace, and after weeks of waiting, he was finally hired.<br>
               Working in the palace was much harder than he expected. The rules were strict, and the servants were constantly under supervision. But Liam didn’t care—every moment in the palace was a chance to be close to Sofia. However, the palace was vast, and finding her was no easy task.<br><br>
-              Aaj ka song - Here With Me by d4vd<br>
+              Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/5LrN7yUQAzvthd4QujgPFr?si=1a04b16cf5f64af8">Here With Me by d4vd</a><br>
               Sorry yaar last sunday mai bhool gaya tha😅
             </p>
           </div>
@@ -426,6 +427,18 @@
               “I wish to be someone who can make Sofia happy, someone who can stand by her side without shame,” Liam said.<br>
               The angel nodded and granted his wish. In a flash, Liam felt a warmth spread through him. He didn’t feel different on the outside, but something inside him had changed. The angel told him that his true worth would be seen by those who looked with their hearts, not their eyes.<br><br>
               aur ek aur chiz. the bus you gave me was really cute. I will keep it safe
+            </p>
+          </div>
+        </div>
+        <div class="page">
+          <div class="para">
+            <p>16/09/24<br><br>
+              <b>Chapter 13: The King’s Decision</b><br>
+              The next day, Liam went to the palace, feeling a newfound confidence. He requested an audience with the king, and after much persuasion, he was allowed to speak to him.<br>
+              Liam spoke from his heart, telling the king about his love for Sofia and how he would do anything to make her happy. The king listened carefully, seeing the sincerity and determination in Liam’s eyes. He saw that Liam’s love was true and pure, and though Liam was still just a simple boy, the king realized that love like this was rare.<br>
+              The king, though conflicted, decided to test Liam. He decided to give him a difficult task, something only a person with great character could achieve.<br><br>
+              Aaj ka song - <a target="_blank" href="https://open.spotify.com/track/2psRActEWsTlYYd7EDoyVR?si=W6IAu7AFS9KHzU57THvO7Q ">Those Eyes by New West</a><br>
+              Maaf karna, mai bhool gaya tha kal😅
             </p>
           </div>
         </div>
