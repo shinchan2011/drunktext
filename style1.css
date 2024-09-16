@@ -1,0 +1,51 @@
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: rgb(93, 210, 239); 
+  color: rgb(0, 0, 0);
+  padding: 0;
+}
+
+b {
+  text-transform: uppercase;
+
+}
+
+a {
+  color: #b70022;
+  text-decoration: none;
+}
+
+.page, .page1 {
+  width: 55vw;
+  margin: 10% 20%;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: rgb(252, 252, 193);
+  font-family: 'Space Mono', monospace;
+}
+
+.style-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: 80%;
+    margin: 10% 2%;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: rgb(252, 252, 193);
+    font-family: 'Space Mono', monospace;
+    font-size: small;
+  }
+}
