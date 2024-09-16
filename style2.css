@@ -1,0 +1,84 @@
+ body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: #121212; 
+  color: #e0e0e0; 
+  padding: 0;
+}
+
+b {
+  text-transform: uppercase;
+  color: #bb86fc; 
+}
+
+a {
+  color: #e8f313;
+  text-decoration: none;
+}
+
+.style-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+.page {
+  width: 55vw;
+  margin: 20vh 20% 20vh;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  font-family: 'Space Mono', monospace;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #333;
+}
+
+.para {
+  color: #bbbbbb; 
+}
+
+.para p:first-child {
+  color: #03dac6; 
+  /* font-weight: bold; */
+}
+
+.para p b {
+  color: #cf6679; 
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: 80%;
+    margin: 10% 2%;
+    padding: 2em;
+    border-radius: 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: small;
+  }
+}
+/* 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}  */
