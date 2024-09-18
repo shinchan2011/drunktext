@@ -49,26 +49,36 @@ gsap.to(pages[0], {
   ease: 'sine.inOut'
 });
 
-const styleToggle = document.getElementById('styleToggle');
+// Toggle between styles using images
+const lightModeIcon = document.getElementById('lightModeIcon');
+const darkModeIcon = document.getElementById('darkModeIcon');
 const styleSheet = document.getElementById('styleSheet');
 let currentStyle = 1;
 
-styleToggle.addEventListener('click', () => {
-  if (currentStyle === 1) {
-    styleSheet.href = 'style2.css';
-    styleToggle.innerText = 'Light Mode';
-    currentStyle = 2;
-  } else {
-    styleSheet.href = 'style1.css'; 
-    styleToggle.innerText = 'Dark Mode';
+lightModeIcon.addEventListener('click', () => {
+  if (currentStyle !== 1) {
+    styleSheet.href = 'style1.css';
+    lightModeIcon.classList.add('active');
+    darkModeIcon.classList.remove('active');
     currentStyle = 1;
+  }
+});
+
+darkModeIcon.addEventListener('click', () => {
+  if (currentStyle !== 2) {
+    styleSheet.href = 'style2.css';
+    darkModeIcon.classList.add('active');
+    lightModeIcon.classList.remove('active');
+    currentStyle = 2;
   }
 });
 
 window.onload = () => {
   if (styleSheet.href.includes('style1.css')) {
-    styleToggle.innerText = 'Dark Mode';
+    lightModeIcon.classList.add('active');
+    darkModeIcon.classList.remove('active');
   } else {
-    styleToggle.innerText = 'Light Mode';
+    darkModeIcon.classList.add('active');
+    lightModeIcon.classList.remove('active');
   }
 };
