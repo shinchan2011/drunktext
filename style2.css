@@ -6,6 +6,27 @@
   padding: 0;
 }
 
+.icon-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  transition: transform 0.2s ease;
+  border-radius: 100%;
+}
+
+.icon.active {
+  transform: scale(1.5);
+}
+
 b {
   text-transform: uppercase;
   color: #bb86fc; 
@@ -65,20 +86,3 @@ a {
     font-size: small;
   }
 }
-/* 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
-}  */
