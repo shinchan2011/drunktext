@@ -1,6 +1,48 @@
-gsap.registerPlugin(ScrollTrigger);
+// gsap.from('.page', {duration:1, x:'-200%', stagger:0.5});
+// gsap.from('.page', {duration:1, height:'0', delay:2.5});
+
+// gsap.from('.para', {duration: 2.5, opacity:'0', delay:3.5});
+
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const pages = gsap.utils.toArray('.page');
+const dateList = document.getElementById('dateList');
+
+pages.forEach((page, index) => {
+  if (index === 0) return; 
+
+  const dateText = page.querySelector('p').innerText.split('\n')[0];
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = `#${page.id}`;
+  a.innerText = dateText;
+  li.appendChild(a);
+  dateList.appendChild(li);
+});
+
+function smoothScroll(target) {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: target,
+      offsetY: 20
+    },
+    ease: "power2.inOut"
+  });
+}
+
+document.querySelectorAll('#dateList a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      smoothScroll(targetElement);
+    }
+  });
+});
 
 pages.forEach((page, index) => {
   if (index === 0) return;
@@ -43,7 +85,6 @@ gsap.to(pages[0], {
   ease: 'sine.inOut'
 });
 
-// Toggle between styles using images
 const lightModeIcon = document.getElementById('lightModeIcon');
 const darkModeIcon = document.getElementById('darkModeIcon');
 const styleSheet = document.getElementById('styleSheet');
