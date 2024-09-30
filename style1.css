@@ -70,3 +70,22 @@ a {
     font-size: small;
   }
 }
+
+#table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#table-of-contents li {
+  margin-bottom: 10px;
+}
+
+#table-of-contents a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#table-of-contents a:hover {
+  text-decoration: underline;
+}
+
