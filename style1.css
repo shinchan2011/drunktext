@@ -1,3 +1,100 @@
+/* body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: rgb(93, 210, 239); 
+  color: rgb(0, 0, 0);
+  padding: 0;
+}
+
+.icon-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  transition: transform 0.2s ease;
+  border-radius: 100%;
+}
+
+.icon.active {
+  transform: scale(1.5);
+}
+
+.toc-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.toc-menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.toc-menu.open {
+  transform: translateX(0);
+}
+
+.page {
+  width: 55vw;
+  margin: 10% 20%;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: rgb(252, 252, 193);
+  font-family: 'Space Mono', monospace;
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: 80%;
+    margin: 10% 2%;
+    padding: 2em;
+    border-radius: 10px;
+    font-size: small;
+  }
+}
+
+#table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#table-of-contents li {
+  margin-bottom: 10px;
+}
+
+#table-of-contents a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#table-of-contents a:hover {
+  text-decoration: underline;
+} */
+
+
+
 body {
   font-family: 'Space Mono', monospace;
   line-height: 1.6;
@@ -29,7 +126,6 @@ body {
 
 b {
   text-transform: uppercase;
-
 }
 
 a {
@@ -89,3 +185,39 @@ a {
   text-decoration: underline;
 }
 
+.toc-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toc-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(252, 252, 193, 0.95);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.toc-menu.open {
+  left: 0;
+}
+
+.toc-content {
+  padding: 20px;
+}
+
+.toc-content h2 {
+  margin-top: 0;
+}
