@@ -1,26 +1,13 @@
-// gsap.from('.page', {duration:1, x:'-200%', stagger:0.5});
-// gsap.from('.page', {duration:1, height:'0', delay:2.5});
-
-// gsap.from('.para', {duration: 2.5, opacity:'0', delay:3.5});
-
-
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const pages = gsap.utils.toArray('.page');
 const dateList = document.getElementById('dateList');
-
-pages.forEach((page, index) => {
-  if (index === 0) return; 
-
-  const dateText = page.querySelector('p').innerText.split('\n')[0];
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.href = `#${page.id}`;
-  a.innerText = dateText;
-  li.appendChild(a);
-  dateList.appendChild(li);
-});
+const tocButton = document.getElementById('tocButton');
+const tocMenu = document.getElementById('tocMenu');
+const lightModeIcon = document.getElementById('lightModeIcon');
+const darkModeIcon = document.getElementById('darkModeIcon');
+const styleSheet = document.getElementById('styleSheet');
+let currentStyle = 1;
 
 function smoothScroll(target) {
   gsap.to(window, {
@@ -33,15 +20,35 @@ function smoothScroll(target) {
   });
 }
 
-document.querySelectorAll('#dateList a').forEach(link => {
-  link.addEventListener('click', (e) => {
+tocButton.addEventListener('click', () => {
+  tocMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (event) => {
+  if (!tocMenu.contains(event.target) && event.target !== tocButton) {
+    tocMenu.classList.remove('open');
+  }
+});
+
+pages.forEach((page, index) => {
+  if (index === 0) return;
+
+  const dateText = page.querySelector('p').innerText.split('\n')[0];
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = `#${page.id}`;
+  a.innerText = dateText;
+  a.addEventListener('click', (e) => {
     e.preventDefault();
     const targetId = e.target.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       smoothScroll(targetElement);
+      tocMenu.classList.remove('open');
     }
   });
+  li.appendChild(a);
+  dateList.appendChild(li);
 });
 
 pages.forEach((page, index) => {
@@ -85,17 +92,13 @@ gsap.to(pages[0], {
   ease: 'sine.inOut'
 });
 
-const lightModeIcon = document.getElementById('lightModeIcon');
-const darkModeIcon = document.getElementById('darkModeIcon');
-const styleSheet = document.getElementById('styleSheet');
-let currentStyle = 1;
-
 lightModeIcon.addEventListener('click', () => {
   if (currentStyle !== 1) {
     styleSheet.href = 'style1.css';
     lightModeIcon.classList.add('active');
     darkModeIcon.classList.remove('active');
     currentStyle = 1;
+    document.body.classList.remove('dark-mode');
   }
 });
 
@@ -105,6 +108,7 @@ darkModeIcon.addEventListener('click', () => {
     darkModeIcon.classList.add('active');
     lightModeIcon.classList.remove('active');
     currentStyle = 2;
+    document.body.classList.add('dark-mode');
   }
 });
 
