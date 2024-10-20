@@ -1,4 +1,4 @@
- body {
+body {
   font-family: 'Space Mono', monospace;
   line-height: 1.6;
   background: #121212; 
@@ -38,18 +38,17 @@ a {
 }
 
 .style-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .page {
   width: 55vw;
@@ -69,7 +68,6 @@ a {
 
 .para p:first-child {
   color: #03dac6; 
-  /* font-weight: bold; */
 }
 
 .para p b {
@@ -86,7 +84,6 @@ a {
     font-size: small;
   }
 }
-
 
 #table-of-contents ul {
   list-style-type: none;
@@ -108,4 +105,42 @@ a {
 
 #table-of-contents a:hover {
   text-decoration: underline;
+}
+
+.toc-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toc-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.95);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  overflow-y: auto;
+  color: #e0e0e0;
+}
+
+.toc-menu.open {
+  left: 0;
+}
+
+.toc-content {
+  padding: 20px;
+}
+
+.toc-content h2 {
+  margin-top: 0;
 }
