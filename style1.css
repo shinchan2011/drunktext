@@ -4,6 +4,7 @@ body {
   background: rgb(93, 210, 239); 
   color: rgb(0, 0, 0);
   padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .icon-toggle {
@@ -93,22 +94,29 @@ a {
   top: 20px;
   left: 20px;
   z-index: 1000;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: rgb(252, 252, 193);
+  color: black;
+  border: black solid 3px;
+  border-radius: 35%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .toc-menu {
   position: fixed;
   top: 0;
-  right: -300px;
+  left: -300px;
   width: 300px;
   height: 100%;
   background-color: rgba(252, 252, 193, 0.95);
-  transition: right 0.3s ease;
+  transition: left 0.3s ease;
   z-index: 1001;
   overflow-y: auto;
 }
@@ -123,4 +131,9 @@ a {
 
 .toc-content h2 {
   margin-top: 0;
+}
+
+body.light-mode {
+  background: rgb(93, 210, 239);
+  color: rgb(0, 0, 0);
 }
