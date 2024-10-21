@@ -99,6 +99,7 @@ lightModeIcon.addEventListener('click', () => {
     darkModeIcon.classList.remove('active');
     currentStyle = 1;
     document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
   }
 });
 
@@ -109,6 +110,7 @@ darkModeIcon.addEventListener('click', () => {
     lightModeIcon.classList.remove('active');
     currentStyle = 2;
     document.body.classList.add('dark-mode');
+    document.body.classList.remove('light-mode');
   }
 });
 
