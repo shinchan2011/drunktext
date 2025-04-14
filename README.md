@@ -1,1 +1,1 @@
-DIARY
+🔗 [drunktext](https://drunktext.vercel.app/)
